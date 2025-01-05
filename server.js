@@ -15,7 +15,7 @@ app.prepare().then(() => {
   const io = new Server(httpServer);
 
   io.on("connection", (socket) => {
-    // ...
+    console.log(`Current User Num > ${io.engine.clientsCount}`);
   });
 
   httpServer
