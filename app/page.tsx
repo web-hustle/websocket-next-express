@@ -40,8 +40,15 @@ export default function Home() {
 
   return (
     <div>
-      <p>Status: { isConnected ? "connected" : "disconnected" }</p>
-      <p>Transport: { transport }</p>
+      <p>Status: {isConnected ? "connected" : "disconnected"}</p>
+      <p>Transport: {transport}</p>
+      <button
+        onClick={() => {
+          socket.emit("asdf", 'send it');
+        }}
+      >
+        발신
+      </button>
     </div>
   );
 }
