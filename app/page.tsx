@@ -26,6 +26,9 @@ export default function Home() {
       setTransport("N/A");
     }
 
+    socket.on("hello", (arg) => {
+      console.log("hello", arg);
+    });
     socket.on("connect", onConnect);
     socket.on("disconnect", onDisconnect);
 

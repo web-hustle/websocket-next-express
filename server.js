@@ -16,6 +16,7 @@ app.prepare().then(() => {
 
   io.on("connection", (socket) => {
     console.log(`Current User Num > ${io.engine.clientsCount}`);
+    socket.emit('hello', 'world');
   });
 
   httpServer
